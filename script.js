@@ -19,3 +19,15 @@ document.querySelectorAll('img[data-fallback]').forEach(img => {
   });
   if (img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event('error'));
 });
+
+// Zoom au clic sur les images de la galerie
+const dlg = document.createElement('dialog');
+dlg.className = 'lightbox';
+dlg.innerHTML = '<img alt="">';
+document.body.appendChild(dlg);
+dlg.addEventListener('click', () => dlg.close());
+document.querySelectorAll('img.zoom').forEach(i => i.addEventListener('click', () => {
+  dlg.querySelector('img').src = i.currentSrc || i.src;
+  dlg.querySelector('img').alt = i.alt;
+  dlg.showModal();
+}));
