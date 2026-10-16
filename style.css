@@ -94,3 +94,14 @@ dialog.lightbox img{max-width:94vw;max-height:90vh;object-fit:contain;border-rad
 section[id]{scroll-margin-top:110px}
 
 .rules-video{width:100%;aspect-ratio:16/9;background:#000;border-radius:var(--radius);border:1px solid var(--border)}
+
+/* Étude : figures et tableau */
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:16px 0 28px}
+.figs figure{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:10px}
+.figs img{width:100%;height:auto;max-height:420px;object-fit:contain;cursor:zoom-in;background:#fff;border-radius:8px}
+.figs figcaption{font-size:.88rem;color:var(--muted);margin-top:8px}
+.table-wrap{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+th{background:var(--surface)}
+h3{margin-top:22px}
